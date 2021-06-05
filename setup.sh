@@ -17,10 +17,6 @@ docker-compose up -d
 docker-compose run --rm --no-deps app composer install
 docker-compose run --rm --no-deps app php artisan key:generate
 
-# 管理画面系初回処理
-#docker-compose run --rm --no-deps app php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
-#docker-compose run --rm --no-deps app composer dump-autoload
-
-#docker-compose run --rm app php artisan admin:install
-#docker-compose run --rm app php artisan migrate --seed
-#docker-compose run --rm app php artisan storage:link
+docker-compose run --rm app php artisan admin:install
+docker-compose run --rm app php artisan migrate --seed
+docker-compose run --rm app php artisan storage:link
