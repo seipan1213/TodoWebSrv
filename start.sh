@@ -8,8 +8,7 @@ chmod -R 777 ./myapp/storage
 
 # Dockerイメージビルド
 docker-compose build --no-cache
-# npmの導入
-docker-compose run --rm --no-deps node npm ci
+
 # Dockerコンテナ起動
 docker-compose up -d
 # Dockerイメージビルド後のコンテナ内での処理
